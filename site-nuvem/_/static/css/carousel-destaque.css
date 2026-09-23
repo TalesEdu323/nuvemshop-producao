@@ -1,0 +1,309 @@
+/* ============================================================================== */
+/* ARQUIVO: static/css/carousel-destaque.css                                      */
+/* Seção Dividida com Carrossel 3D - Thiago Pessoa / Joalheria Autoral            */
+/* ============================================================================== */
+
+:root {
+  --ns-card-w: 320px;
+  --ns-card-h: 440px;
+  --ns-side-scale: 0.84;
+  --ns-overlap: 100px;
+  --ns-radius: 16px;
+  --ns-gold: #d6bb89;
+  --ns-gold-hover: #c9ad79;
+  --ns-text-dark: #1a1a1a;
+  --ns-text-body: #374151;
+  --ns-active-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  --ns-side-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+.ns-split-section {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 64px 24px 48px;
+  box-sizing: border-box;
+}
+
+.ns-split-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+  width: 100%;
+}
+
+/* Coluna da Esquerda: Textos e Botão */
+.ns-split-text-col {
+  flex: 1 1 48%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.ns-split-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--ns-text-dark);
+  line-height: 1.18;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.025em;
+}
+
+.ns-split-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ns-text-dark);
+  line-height: 1.45;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.01em;
+}
+
+.ns-split-description p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ns-text-body);
+  margin: 0 0 16px 0;
+}
+
+.ns-split-description p:last-child {
+  margin-bottom: 0;
+}
+
+.ns-split-cta {
+  margin-top: 32px;
+}
+
+.ns-split-btn {
+  display: inline-block;
+  background-color: var(--ns-gold);
+  color: var(--ns-text-dark);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(214, 187, 137, 0.25);
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.ns-split-btn:hover {
+  background-color: var(--ns-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(214, 187, 137, 0.35);
+  color: var(--ns-text-dark);
+  text-decoration: none;
+}
+
+/* Coluna da Direita: Carrossel 3D */
+.ns-split-carousel-col {
+  flex: 1 1 52%;
+  min-width: 0;
+  position: relative;
+}
+
+.ns-carousel {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.ns-track {
+  position: relative;
+  height: var(--ns-card-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.ns-slide {
+  position: absolute;
+  width: var(--ns-card-w);
+  height: var(--ns-card-h);
+  border-radius: var(--ns-radius);
+  overflow: hidden;
+  background: #1e1e1e;
+  transition: transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1), 
+              opacity 0.55s ease, 
+              box-shadow 0.55s ease,
+              filter 0.55s ease;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+  box-shadow: var(--ns-side-shadow);
+}
+
+.ns-slide-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ns-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+/* Slide Central: Ativo, ampliado, sombra forte e topo da pilha */
+.ns-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 5;
+  transform: translateX(0) scale(1);
+  box-shadow: var(--ns-active-shadow);
+  cursor: default;
+  filter: brightness(1);
+}
+
+/* Slides Laterais: Menores, com profundidade 3D */
+.ns-slide.is-prev,
+.ns-slide.is-next {
+  opacity: 0.9;
+  pointer-events: auto;
+  z-index: 3;
+  cursor: pointer;
+  filter: brightness(0.92);
+}
+
+.ns-slide.is-prev {
+  transform: translateX(calc(-1 * (var(--ns-card-w) - var(--ns-overlap)))) scale(var(--ns-side-scale));
+}
+
+.ns-slide.is-next {
+  transform: translateX(calc(var(--ns-card-w) - var(--ns-overlap))) scale(var(--ns-side-scale));
+}
+
+.ns-slide.is-prev:hover,
+.ns-slide.is-next:hover {
+  filter: brightness(1.05);
+}
+
+/* Botões de Navegação (Setas) */
+.ns-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.ns-nav:hover {
+  background: #111111;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.ns-prev { left: 4px; }
+.ns-next { right: 4px; }
+
+/* Indicadores (Dots) */
+.ns-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.ns-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 0;
+  background: #d1d5db;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.ns-dot:hover {
+  background: #9ca3af;
+}
+
+.ns-dot.is-active {
+  background: var(--ns-text-dark);
+  width: 24px;
+}
+
+/* Linha divisória sutil na base */
+.ns-split-divider {
+  width: 100%;
+  height: 1px;
+  background: #ebdcc2;
+  margin-top: 60px;
+}
+
+/* Responsividade Tablet */
+@media (max-width: 1024px) {
+  .ns-split-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+  .ns-split-text-col {
+    max-width: 100%;
+  }
+  .ns-split-carousel-col {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+/* Responsividade Mobile */
+@media (max-width: 640px) {
+  :root {
+    --ns-card-w: 240px;
+    --ns-card-h: 340px;
+    --ns-overlap: 70px;
+    --ns-side-scale: 0.82;
+  }
+
+  .ns-split-section {
+    padding: 40px 16px 32px;
+  }
+
+  .ns-split-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .ns-split-subtitle {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .ns-split-description p {
+    font-size: 14px;
+  }
+
+  .ns-split-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ns-prev { left: -6px; }
+  .ns-next { right: -6px; }
+}

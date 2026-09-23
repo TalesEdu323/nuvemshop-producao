@@ -1,0 +1,1420 @@
+
+/* ========================================================================== */
+/* ESCUDO DE PROTEÇÃO E HARMONIZAÇÃO DO CABEÇALHO / MENU NUVEMSHOP (THIAGO PESSOA) */
+/* Centraliza o cabeçalho em 1240px, junta o logotipo, menu e ícones            */
+/* e impede que fiquem espalhados nos cantos extremos da tela                    */
+/* ========================================================================== */
+
+/* 1. Trava geral do cabeçalho */
+header,
+.header,
+.section-header,
+.js-header,
+[data-store="header"],
+.nav-bar,
+.head-main,
+.nav-primary,
+.desktop-nav {
+  position: relative !important;
+  width: 100% !important;
+  margin-bottom: 0 !important;
+}
+
+/* 2. Container centralizado do cabeçalho (Impede vazamento para as bordas da tela) */
+header > .container,
+header > .container-fluid,
+header > .row,
+.header > .container,
+.header > .container-fluid,
+.section-header > .container,
+.section-header > .container-fluid,
+.js-header > .container,
+.js-header > .container-fluid,
+[data-store="header"] > .container,
+[data-store="header"] > .container-fluid,
+.nav-bar > .container,
+.nav-bar > .container-fluid,
+.head-main > .container,
+.head-main > .container-fluid,
+.header-container,
+.header-row,
+.head-main,
+.nav-row,
+.header-main {
+  max-width: 1240px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. Logotipo da marca com espaçamento harmônico */
+.header-logo,
+.header-brand,
+.logo-img,
+.logo,
+header .logo,
+.head-main .logo {
+  display: flex !important;
+  align-items: center !important;
+  max-width: 240px !important;
+  margin-right: 20px !important;
+}
+
+/* 4. Menu de navegação centralizado e elegante (sem espalhar na tela) */
+.desktop-nav,
+.nav-desktop,
+.js-desktop-nav,
+.nav-primary,
+.header-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 1 1 auto !important;
+  margin: 0 auto !important;
+}
+
+.desktop-nav .nav-list,
+.nav-desktop .nav-list,
+.nav-primary .nav-list,
+.nav-list-desktop,
+.header-nav .nav-list {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.desktop-nav .nav-link,
+.nav-desktop .nav-link,
+.nav-primary .nav-link,
+.header-nav .nav-link {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1a1a1a !important;
+  padding: 8px 6px !important;
+  white-space: nowrap !important;
+  letter-spacing: -0.1px !important;
+  transition: color 0.2s ease !important;
+}
+
+.desktop-nav .nav-link:hover,
+.nav-desktop .nav-link:hover,
+.nav-primary .nav-link:hover {
+  color: #c9ad79 !important;
+}
+
+/* 5. Ícones Utilitários à direita (Lupa, Conta, Carrinho) agrupados */
+.header-utilities,
+.head-utilities,
+.header-icons,
+.nav-icons,
+.utilities-container,
+.head-icons {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 16px !important;
+  margin-left: 20px !important;
+  flex-shrink: 0 !important;
+}
+
+header .container .row,
+.header .container .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+}
+
+/* ========================================================================= */
+/* CSS DEFINITIVO - EXPERIÊNCIA PRIMEIRO SIM (THIAGO PESSOA)                  */
+/* Adicione em: Minha Nuvemshop > Layout > Personalizar > Edição de CSS      */
+/* ========================================================================= */
+
+/* 1. ELIMINA 100% DO VÃO ENTRE O MENU E O BANNER (COLA O BANNER NO MENU) */
+body.template-page .breadcrumbs,
+body.template-page .breadcrumb,
+body.template-page .breadcrumb-container,
+body.template-page .page-header,
+body.template-page .page-header-container,
+body.template-page .category-header,
+body.template-page [data-store="page-title"],
+body.template-page .page-title,
+body.template-page h1.page-title,
+body.template-page .title-page,
+body.template-page .header-space,
+body.template-page .js-header-space,
+body.template-page .site-header-space,
+body.page .breadcrumbs,
+body.page .page-header,
+body.page .page-title,
+body.page .header-space,
+body.page .js-header-space,
+body[class*="primeiro"] .breadcrumbs,
+body[class*="primeiro"] .breadcrumb,
+body[class*="primeiro"] .breadcrumb-container,
+body[class*="primeiro"] nav.breadcrumb,
+body[class*="primeiro"] .page-header,
+body[class*="primeiro"] .page-header-container,
+body[class*="primeiro"] .category-header,
+body[class*="primeiro"] [data-store="page-title"],
+body[class*="primeiro"] .page-title,
+body[class*="primeiro"] h1.page-title,
+body[class*="primeiro"] .title-page,
+body[class*="primeiro"] .header-space,
+body[class*="primeiro"] .js-header-space,
+body[class*="primeiro"] .site-header-space,
+.page-primeiro-sim1 .breadcrumbs,
+.page-primeiro-sim1 .page-header,
+.page-primeiro-sim1 .page-title,
+.page-primeiro-sim1 .header-space,
+.page-primeiro-sim1 .js-header-space,
+.page-primeiro-sim .breadcrumbs,
+.page-primeiro-sim .page-header,
+.page-primeiro-sim .page-title,
+.page-primeiro-sim .header-space,
+.page-primeiro-sim .js-header-space {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  overflow: hidden !important;
+}
+
+/* 2. ZERA MARGENS DO CABEÇALHO E CONTAINERS NATIVOS DA NUVEMSHOP */
+header,
+.header,
+.section-header,
+.js-header,
+[data-store="header"] {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+main,
+#main,
+#page,
+.main-content,
+.user-content,
+.page-content,
+.content-page,
+.section-page,
+.container-page {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+body.page--primeiro_sim,
+body.page--primeiro-sim1,
+body.page--primeiro-sim,
+body[class*="primeiro_sim"],
+body[class*="primeiro-sim"],
+body[class*="primeiro"],
+body[class*="primeiro"] main,
+body[class*="primeiro"] #page,
+body[class*="primeiro"] .main-content,
+body[class*="primeiro"] .user-content,
+body[class*="primeiro"] .page-content,
+body[class*="primeiro"] .user-content .container,
+body[class*="primeiro"] .user-content .row,
+body[class*="primeiro"] .user-content .col-md-12 {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. OCULTA TODOS OS PARÁGRAFOS RESIDUAIS QUE O EDITOR NUVEMSHOP INJETA ANTES DO BANNER */
+body.template-page .col-md-12 > p,
+body.template-page .user-content > p,
+body.template-page .user-content > br,
+body.template-page .col-md-12 > br,
+body.page--primeiro_sim .col-md-12 > p,
+body.page--primeiro_sim .user-content > p,
+body.page--primeiro_sim .user-content > br,
+body.page--primeiro-sim1 .col-md-12 > p,
+body[class*="primeiro"] .col-md-12 > p,
+body[class*="primeiro"] .user-content > p,
+body[class*="primeiro"] .user-content > .container > .row > .col-md-12 > p,
+.page-primeiro-sim1 .col-md-12 > p {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  border: none !important;
+  visibility: hidden !important;
+}
+
+/* Re-exibe apenas os parágrafos legítimos da nossa página */
+body[class*="primeiro"] .elementor-tp-page-wrapper p,
+body.template-page .elementor-tp-page-wrapper p,
+.elementor-tp-page-wrapper p {
+  display: block !important;
+  visibility: visible !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+}
+
+/* 4. Evita rolagem horizontal e padroniza a tipografia */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* 5. WRAPPER DA PÁGINA: 100VW REAL E RENTE AO MENU (0PX) */
+.elementor-tp-page-wrapper,
+body[class*="primeiro"] .elementor-tp-page-wrapper {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 0px !important; /* Rente ao menu (0px) - eliminação total do vão superior */
+  padding-top: 0 !important;
+  padding-bottom: 60px !important;
+  box-sizing: border-box !important;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  overflow-x: hidden !important;
+  background: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .elementor-tp-page-wrapper,
+  body[class*="primeiro"] .elementor-tp-page-wrapper {
+    margin-top: 12px !important;
+  }
+}
+
+/* 6. BANNER NO TOPO: ENCOSTADO NO MENU E 100% TELA A TELA */
+.elementor-tp-hero-banner,
+body[class*="primeiro"] .elementor-tp-hero-banner {
+  position: relative !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin: 0 auto 50px auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  left: 0 !important;
+}
+
+.elementor-tp-hero-banner .e-con-inner,
+.elementor-tp-hero-banner .elementor-widget-container,
+.elementor-tp-hero-banner picture,
+.elementor-tp-hero-banner img,
+body[class*="primeiro"] .elementor-tp-hero-banner img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border: 0 !important;
+  object-fit: cover !important;
+}
+
+/* 7. SEÇÕES DE CONTEÚDO 50/50 HARMONIOSAS (ESTILO LIÊ JOIAS - FOTO 3) */
+.elementor-tp-page-wrapper .howworks,
+body[class*="primeiro"] .elementor-tp-page-wrapper .howworks {
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin: 65px auto !important;
+  padding: 0 24px !important;
+  box-sizing: border-box !important;
+}
+
+.elementor-tp-page-wrapper .howworks .e-con-inner,
+body[class*="primeiro"] .elementor-tp-page-wrapper .howworks .e-con-inner {
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 50px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+.elementor-tp-page-wrapper .howworks-reverse .e-con-inner,
+body[class*="primeiro"] .elementor-tp-page-wrapper .howworks-reverse .e-con-inner {
+  flex-direction: row-reverse !important;
+}
+
+.elementor-tp-page-wrapper .tp-text-col,
+body[class*="primeiro"] .tp-text-col {
+  flex: 1 1 48% !important;
+  max-width: 540px !important;
+  min-width: 300px !important;
+  display: flex !important;
+  flex-flow: column !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  border-bottom: 1px solid #dec995 !important;
+  padding-bottom: 28px !important;
+  box-sizing: border-box !important;
+}
+
+.elementor-tp-page-wrapper .tp-slider-col,
+body[class*="primeiro"] .tp-slider-col {
+  flex: 1 1 52% !important;
+  max-width: 640px !important;
+  min-width: 320px !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+/* 8. TOKENS UNIVERSAIS DE DESIGN & CARROSSEL SHOWCASE DE ALTA JOALHERIA */
+
+
+/* ========================================================================== */
+/* ESCUDO DE PROTEÇÃO E HARMONIZAÇÃO DO CABEÇALHO / MENU NUVEMSHOP (THIAGO PESSOA) */
+/* Centraliza o cabeçalho em 1240px, junta o logotipo, menu e ícones            */
+/* e impede que fiquem espalhados nos cantos extremos da tela                    */
+/* ========================================================================== */
+
+/* 1. Trava geral do cabeçalho */
+header,
+.header,
+.section-header,
+.js-header,
+[data-store="header"],
+.nav-bar,
+.head-main,
+.nav-primary,
+.desktop-nav {
+  position: relative !important;
+  width: 100% !important;
+  margin-bottom: 0 !important;
+}
+
+/* 2. Container centralizado do cabeçalho (Impede vazamento para as bordas da tela) */
+header > .container,
+header > .container-fluid,
+header > .row,
+.header > .container,
+.header > .container-fluid,
+.section-header > .container,
+.section-header > .container-fluid,
+.js-header > .container,
+.js-header > .container-fluid,
+[data-store="header"] > .container,
+[data-store="header"] > .container-fluid,
+.nav-bar > .container,
+.nav-bar > .container-fluid,
+.head-main > .container,
+.head-main > .container-fluid,
+.header-container,
+.header-row,
+.head-main,
+.nav-row,
+.header-main {
+  max-width: 1240px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. Logotipo da marca com espaçamento harmônico */
+.header-logo,
+.header-brand,
+.logo-img,
+.logo,
+header .logo,
+.head-main .logo {
+  display: flex !important;
+  align-items: center !important;
+  max-width: 240px !important;
+  margin-right: 20px !important;
+}
+
+/* 4. Menu de navegação centralizado e elegante (sem espalhar na tela) */
+.desktop-nav,
+.nav-desktop,
+.js-desktop-nav,
+.nav-primary,
+.header-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 1 1 auto !important;
+  margin: 0 auto !important;
+}
+
+.desktop-nav .nav-list,
+.nav-desktop .nav-list,
+.nav-primary .nav-list,
+.nav-list-desktop,
+.header-nav .nav-list {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.desktop-nav .nav-link,
+.nav-desktop .nav-link,
+.nav-primary .nav-link,
+.header-nav .nav-link {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1a1a1a !important;
+  padding: 8px 6px !important;
+  white-space: nowrap !important;
+  letter-spacing: -0.1px !important;
+  transition: color 0.2s ease !important;
+}
+
+.desktop-nav .nav-link:hover,
+.nav-desktop .nav-link:hover,
+.nav-primary .nav-link:hover {
+  color: #c9ad79 !important;
+}
+
+/* 5. Ícones Utilitários à direita (Lupa, Conta, Carrinho) agrupados */
+.header-utilities,
+.head-utilities,
+.header-icons,
+.nav-icons,
+.utilities-container,
+.head-icons {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 16px !important;
+  margin-left: 20px !important;
+  flex-shrink: 0 !important;
+}
+
+header .container .row,
+.header .container .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+}
+
+
+/* ========================================================================== */
+/* PADRONIZAÇÃO VISUAL UNIVERSAL THIAGO PESSOA (TODAS AS PÁGINAS DA LOJA)     */
+/* Elimina 100% dos vãos, parágrafos vazios da Nuvemshop e padroniza o design */
+/* ========================================================================== */
+
+/* 0. ELIMINAÇÃO TOTAL DO VÃO ENTRE MENU E BANNER EM TODAS AS PÁGINAS NUVEMSHOP */
+body.template-page .breadcrumbs,
+body.template-page .breadcrumb,
+body.template-page .breadcrumb-container,
+body.template-page .page-header,
+body.template-page .page-header-container,
+body.template-page .page-header-slim,
+body.template-page .section-page-header,
+body.template-page .category-header,
+body.template-page [data-store="page-title"],
+body.template-page .page-title,
+body.template-page h1.page-title,
+body.template-page .title-page,
+body.template-page .header-space,
+body.template-page .js-header-space,
+body.template-page .site-header-space,
+body.page .breadcrumbs,
+body.page .page-header,
+body.page .page-title,
+body.page .header-space,
+body.page .js-header-space {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  overflow: hidden !important;
+}
+
+/* Zera margens e paddings dos containers nativos Nuvemshop */
+body.template-page .user-content,
+body.template-page .user-content > .container,
+body.template-page .user-content > .container > .row,
+body.template-page .user-content > .container > .row > .col-md-12,
+body.template-page .user-content > .row,
+body.template-page .user-content > .col-md-12,
+body.template-page .main-content,
+body.template-page .content-page,
+body.template-page .section-page,
+body.template-page .container-page {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ELIMINA OS 4 PARÁGRAFOS FANTASMAS QUE O EDITOR NUVEMSHOP INJETA ANTES DO BANNER */
+body.template-page .col-md-12 > p,
+body.template-page .user-content > p,
+body.template-page .user-content > br,
+body.template-page .col-md-12 > br,
+body.template-page .user-content > .container > .row > .col-md-12 > p {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  border: none !important;
+  visibility: hidden !important;
+}
+
+/* Re-exibe apenas os parágrafos legítimos das nossas landing pages */
+.elementor-tp-page-wrapper p,
+.elementor-tp-ressignificacao-wrapper p,
+.elementor-tp-ourives-wrapper p,
+.elementor-tp-joias-wrapper p,
+.elementor-tp-monogramas-wrapper p {
+  display: block !important;
+  visibility: visible !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+}
+
+/* WRAPPER UNIVERSAL DE TODAS AS PÁGINAS: 100VW E CONTROLE PRECISO DO RESPIRO */
+.elementor-tp-page-wrapper,
+.elementor-tp-ressignificacao-wrapper,
+.elementor-tp-ourives-wrapper,
+.elementor-tp-joias-wrapper,
+.elementor-tp-monogramas-wrapper {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 0px !important; /* 0px = Rente ao menu. Altere para 12px ou 18px se quiser respiro */
+  padding-top: 0 !important;
+  padding-bottom: 60px !important;
+  box-sizing: border-box !important;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  overflow-x: hidden !important;
+  background: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .elementor-tp-page-wrapper,
+  .elementor-tp-ressignificacao-wrapper,
+  .elementor-tp-ourives-wrapper,
+  .elementor-tp-joias-wrapper,
+  .elementor-tp-monogramas-wrapper {
+    margin-top: 0px !important;
+  }
+}
+
+/* HERO BANNER 100% FULL-WIDTH EM TODAS AS PÁGINAS */
+.elementor-tp-hero-banner,
+.elementor-tp-page-wrapper .elementor-tp-hero-banner,
+.elementor-tp-ressignificacao-wrapper .elementor-tp-hero-banner,
+.elementor-tp-ourives-wrapper .elementor-tp-hero-banner,
+.elementor-tp-joias-wrapper .elementor-tp-hero-banner,
+.elementor-tp-monogramas-wrapper .elementor-tp-hero-banner {
+  position: relative !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin: 0 auto 50px auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  left: 0 !important;
+}
+
+.elementor-tp-hero-banner img,
+.elementor-tp-hero-banner picture,
+.elementor-tp-hero-banner .elementor-widget-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border: 0 !important;
+  object-fit: cover !important;
+}
+
+/* 1. NÚMERO DO PASSO: 38px Dourado (#dfc995) */
+.tp-step-number,
+.tp-step-num,
+.elementor-tp-page-wrapper .tp-step-number,
+.elementor-tp-ressignificacao-wrapper .tp-step-number,
+.elementor-tp-ourives-wrapper .tp-step-number,
+.elementor-tp-joias-wrapper .tp-step-number,
+.elementor-tp-monogramas-wrapper .tp-step-num,
+body[class*="primeiro"] .tp-step-number,
+body[class*="ressignifica"] .tp-step-number,
+body[class*="ourives"] .tp-step-number,
+body[class*="joias"] .tp-step-number,
+body[class*="personalizadas"] .tp-step-number,
+body[class*="monograma"] .tp-step-num {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 38px !important;
+  font-weight: 700 !important;
+  color: #dfc995 !important;
+  line-height: 1 !important;
+  margin: 0 0 12px 0 !important;
+  letter-spacing: -0.5px !important;
+  display: block !important;
+}
+
+/* 1.1 ALINHAMENTO DO NÚMERO E TÍTULO NA MESMA LINHA (SOLICITAÇÃO DO CLIENTE EM TODAS AS PÁGINAS) */
+.tp-step-title-row,
+.elementor-tp-page-wrapper .tp-step-title-row,
+.elementor-tp-ressignificacao-wrapper .tp-step-title-row,
+.elementor-tp-ourives-wrapper .tp-step-title-row,
+.elementor-tp-joias-wrapper .tp-step-title-row,
+.elementor-tp-monogramas-wrapper .tp-step-title-row,
+body[class*="primeiro"] .tp-step-title-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: baseline !important;
+  gap: 14px !important;
+  margin: 0 0 16px 0 !important;
+  width: 100% !important;
+}
+
+.tp-step-title-row .tp-step-number,
+.tp-step-title-row .tp-step-num,
+body[class*="primeiro"] .tp-step-title-row .tp-step-number {
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  line-height: 1 !important;
+}
+
+.tp-step-title-row .tp-step-title,
+body[class*="primeiro"] .tp-step-title-row .tp-step-title {
+  margin: 0 !important;
+  line-height: 1.25 !important;
+  flex: 1 1 auto !important;
+}
+
+/* 1.2 REMOÇÃO DAS SETAS LATERAIS DO CARROSSEL EM TODAS AS PÁGINAS (SOLICITADO PELO CLIENTE) */
+.tp-carousel-nav,
+.tp-carousel-btn,
+.tp-carousel-prev,
+.tp-carousel-next,
+button.tp-carousel-nav,
+a.tp-carousel-nav,
+.tp-carousel-arrow {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* 2. TÍTULO DO PASSO (H2): 28px Preto (#000000) 800 */
+.tp-step-title,
+.elementor-tp-page-wrapper .tp-step-title,
+.elementor-tp-ressignificacao-wrapper .tp-step-title,
+.elementor-tp-ourives-wrapper .tp-step-title,
+.elementor-tp-joias-wrapper .tp-step-title,
+.elementor-tp-monogramas-wrapper .tp-step-title,
+body[class*="primeiro"] .tp-step-title,
+body[class*="ressignifica"] .tp-step-title,
+body[class*="ourives"] .tp-step-title,
+body[class*="joias"] .tp-step-title,
+body[class*="personalizadas"] .tp-step-title,
+body[class*="monograma"] .tp-step-title {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #000000 !important;
+  line-height: 1.25 !important;
+  margin: 0 0 16px 0 !important;
+}
+
+/* 3. TEXTO DESCRITIVO / PARÁGRAFOS / ITENS DE LISTA: 15px (#222222) */
+.tp-step-desc,
+.elementor-tp-page-wrapper .tp-step-desc,
+.elementor-tp-ressignificacao-wrapper .tp-step-desc,
+.elementor-tp-ourives-wrapper .tp-step-desc,
+.elementor-tp-joias-wrapper .tp-step-desc,
+.elementor-tp-monogramas-wrapper .tp-step-desc,
+.elementor-tp-page-wrapper p,
+.elementor-tp-ressignificacao-wrapper p,
+.elementor-tp-ourives-wrapper p,
+.elementor-tp-joias-wrapper p,
+.elementor-tp-monogramas-wrapper p,
+.tp-check-item,
+body[class*="primeiro"] .tp-step-desc,
+body[class*="ressignifica"] .tp-step-desc,
+body[class*="ourives"] .tp-step-desc,
+body[class*="joias"] .tp-step-desc,
+body[class*="personalizadas"] .tp-step-desc,
+body[class*="monograma"] .tp-step-desc {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: #222222 !important;
+  line-height: 1.75 !important;
+  margin: 0 0 16px 0 !important;
+}
+
+.tp-text-col strong,
+.tp-step-desc strong,
+.tp-check-item strong {
+  font-weight: 700 !important;
+  color: #000000 !important;
+}
+
+/* 4. COLUNA DE TEXTO & LINHA DIVISÓRIA DOURADA */
+.tp-text-col,
+.elementor-tp-page-wrapper .tp-text-col,
+.elementor-tp-ressignificacao-wrapper .tp-text-col,
+.elementor-tp-ourives-wrapper .tp-text-col,
+.elementor-tp-joias-wrapper .tp-text-col,
+.elementor-tp-monogramas-wrapper .tp-text-col {
+  flex: 1 1 440px !important;
+  max-width: 520px !important;
+  min-width: 280px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  border-bottom: 1px solid #dec995 !important;
+  padding-bottom: 28px !important;
+  box-sizing: border-box !important;
+}
+
+/* 5. COLUNA DO CARROSSEL 3D */
+.tp-slider-col,
+.elementor-tp-page-wrapper .tp-slider-col,
+.elementor-tp-ressignificacao-wrapper .tp-slider-col,
+.elementor-tp-ourives-wrapper .tp-slider-col,
+.elementor-tp-joias-wrapper .tp-slider-col,
+.elementor-tp-monogramas-wrapper .tp-slider-col,
+.elementor-tp-monogramas-wrapper .tp-visual-col {
+  flex: 1 1 540px !important;
+  max-width: 720px !important;
+  min-width: 320px !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* 6. BOTÃO DE AÇÃO DOS PASSOS (PADRÃO FOTO 1: THIAGO PESSOA LUXO) */
+/* Fundo Branco, Borda 1.5px Preto #111111, Raio 8px, Seta → */
+/* Hover: Inversão total de cores (Fundo #111111, Texto #ffffff) */
+
+.tp-step-action-btn,
+.tp-cta-btn,
+.elementor-tp-page-wrapper .tp-step-action-btn,
+.elementor-tp-ressignificacao-wrapper .tp-step-action-btn,
+.elementor-tp-ourives-wrapper .tp-step-action-btn,
+.elementor-tp-joias-wrapper .tp-step-action-btn,
+.elementor-tp-monogramas-wrapper .tp-step-action-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  border: 1.5px solid #111111 !important;
+  border-radius: 8px !important;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.2px !important;
+  text-decoration: none !important;
+  padding: 13px 26px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.22s ease-in-out !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+  margin-top: 16px !important;
+  width: fit-content !important;
+}
+
+.tp-step-action-btn:hover,
+.tp-cta-btn:hover,
+.elementor-tp-page-wrapper .tp-step-action-btn:hover,
+.elementor-tp-ressignificacao-wrapper .tp-step-action-btn:hover,
+.elementor-tp-ourives-wrapper .tp-step-action-btn:hover,
+.elementor-tp-joias-wrapper .tp-step-action-btn:hover,
+.elementor-tp-monogramas-wrapper .tp-step-action-btn:hover {
+  background: #111111 !important;
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18) !important;
+}
+
+.tp-step-action-btn .tp-btn-arrow,
+.tp-cta-btn .tp-btn-arrow {
+  display: inline-block !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  color: inherit !important;
+  transition: transform 0.22s ease !important;
+}
+
+.tp-step-action-btn:hover .tp-btn-arrow,
+.tp-cta-btn:hover .tp-btn-arrow {
+  transform: translateX(4px) !important;
+  color: #ffffff !important;
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 768px) {
+  .tp-step-number,
+  .tp-step-num,
+  .elementor-tp-page-wrapper .tp-step-number,
+  .elementor-tp-ressignificacao-wrapper .tp-step-number,
+  .elementor-tp-ourives-wrapper .tp-step-number,
+  .elementor-tp-joias-wrapper .tp-step-number,
+  .elementor-tp-monogramas-wrapper .tp-step-num {
+    font-size: 30px !important;
+  }
+
+  .tp-step-title,
+  .elementor-tp-page-wrapper .tp-step-title,
+  .elementor-tp-ressignificacao-wrapper .tp-step-title,
+  .elementor-tp-ourives-wrapper .tp-step-title,
+  .elementor-tp-joias-wrapper .tp-step-title,
+  .elementor-tp-monogramas-wrapper .tp-step-title {
+    font-size: 23px !important;
+  }
+
+  .tp-step-desc,
+  .elementor-tp-page-wrapper .tp-step-desc,
+  .elementor-tp-ressignificacao-wrapper .tp-step-desc,
+  .elementor-tp-ourives-wrapper .tp-step-desc,
+  .elementor-tp-joias-wrapper .tp-step-desc,
+  .elementor-tp-monogramas-wrapper .tp-step-desc {
+    font-size: 14.5px !important;
+  }
+
+  .tp-step-action-btn,
+  .tp-cta-btn {
+    width: 100% !important;
+    padding: 14px 20px !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+}
+
+
+/* ========================================================================== */
+/* SHOWCASE SLIDER DE ALTA JOALHERIA (ESTILO LIÊ JOIAS / THIAGO PESSOA)       */
+/* ========================================================================== */
+
+.tp-slider-col {
+  flex: 1 1 52% !important;
+  max-width: 640px !important;
+  min-width: 320px !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+.tp-showcase-slider,
+.tp-center-carousel,
+.tp-carousel-3d,
+[data-tp-carousel] {
+  position: relative !important;
+  width: 100% !important;
+  height: 520px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  background-color: #f7f6f2 !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+  touch-action: pan-y !important;
+  margin: 0 !important;
+}
+
+.tp-showcase-slider .tp-track,
+.tp-center-carousel .tp-track,
+.tp-carousel-3d .tp-track {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+/* SLIDES (PREENCHIMENTO TOTAL DA COLUNA - ESTILO FOTO 3) */
+.tp-showcase-slider .tp-slide,
+.tp-center-carousel .tp-slide,
+.tp-carousel-3d .tp-card {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.02);
+  transition: opacity 0.65s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 0.75s cubic-bezier(0.25, 1, 0.5, 1),
+              visibility 0.65s ease;
+  z-index: 1;
+  pointer-events: none;
+  box-sizing: border-box !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Ativação quando em modo interativo (clique manual do visitante) */
+[data-tp-interactive="true"] .tp-slide.pos-active,
+[data-tp-interactive="true"] .tp-card.pos-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: scale(1) !important;
+  z-index: 10 !important;
+  pointer-events: auto !important;
+}
+
+[data-tp-interactive="true"] .tp-slide:not(.pos-active),
+[data-tp-interactive="true"] .tp-card:not(.pos-active) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: scale(1.02) !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.tp-showcase-slider .tp-slide img,
+.tp-center-carousel .tp-slide img,
+.tp-carousel-3d .tp-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  pointer-events: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* ========================================================================== */
+/* ANIMAÇÕES NATIVAS EM CSS PURO (ROTAÇÃO CONTÍNUA MESMO COM ZERO SCRIPTS)   */
+/* ========================================================================== */
+
+@keyframes tpShowcase3Auto {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 5;
+    pointer-events: auto;
+  }
+  28% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 5;
+    pointer-events: auto;
+  }
+  33.33% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.02);
+    z-index: 1;
+    pointer-events: none;
+  }
+  95% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.02);
+    z-index: 1;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 5;
+    pointer-events: auto;
+  }
+}
+
+@keyframes tpShowcase5Auto {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 5;
+    pointer-events: auto;
+  }
+  16% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 5;
+    pointer-events: auto;
+  }
+  20% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.02);
+    z-index: 1;
+    pointer-events: none;
+  }
+  96% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.02);
+    z-index: 1;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 5;
+    pointer-events: auto;
+  }
+}
+
+/* 3 Fotos (Passos 02 e 05) - Ciclo de 12s */
+.tp-carousel-3:not([data-tp-interactive="true"]) .tp-slide:nth-child(1),
+.tp-cards-3:not([data-tp-interactive="true"]) .tp-card:nth-child(1) {
+  animation: tpShowcase3Auto 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+.tp-carousel-3:not([data-tp-interactive="true"]) .tp-slide:nth-child(2),
+.tp-cards-3:not([data-tp-interactive="true"]) .tp-card:nth-child(2) {
+  animation: tpShowcase3Auto 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -8s;
+}
+.tp-carousel-3:not([data-tp-interactive="true"]) .tp-slide:nth-child(3),
+.tp-cards-3:not([data-tp-interactive="true"]) .tp-card:nth-child(3) {
+  animation: tpShowcase3Auto 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -4s;
+}
+
+/* 5 Fotos (Passos 01, 03 e 04) - Ciclo de 17.5s */
+.tp-carousel-5:not([data-tp-interactive="true"]) .tp-slide:nth-child(1) {
+  animation: tpShowcase5Auto 17.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+.tp-carousel-5:not([data-tp-interactive="true"]) .tp-slide:nth-child(2) {
+  animation: tpShowcase5Auto 17.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -14s;
+}
+.tp-carousel-5:not([data-tp-interactive="true"]) .tp-slide:nth-child(3) {
+  animation: tpShowcase5Auto 17.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -10.5s;
+}
+.tp-carousel-5:not([data-tp-interactive="true"]) .tp-slide:nth-child(4) {
+  animation: tpShowcase5Auto 17.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -7s;
+}
+.tp-carousel-5:not([data-tp-interactive="true"]) .tp-slide:nth-child(5) {
+  animation: tpShowcase5Auto 17.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -3.5s;
+}
+
+/* Pausa automática quando o cliente passa o mouse para ver detalhes */
+.tp-showcase-slider:hover .tp-slide,
+.tp-center-carousel:hover .tp-slide,
+.tp-carousel-3d:hover .tp-card {
+  animation-play-state: paused !important;
+}
+
+/* ========================================================================== */
+/* ANIMAÇÃO NATIVA DOS INDICADORES (DOTS) EM SINCRONIA COM AS FOTOS           */
+/* ========================================================================== */
+
+@keyframes tpDotPulse3 {
+  0%, 28% { width: 22px; border-radius: 10px; background: #dfc995; box-shadow: 0 0 10px rgba(223, 201, 149, 0.8); }
+  33.33%, 95% { width: 7px; border-radius: 50%; background: rgba(255, 255, 255, 0.45); box-shadow: none; }
+  100% { width: 22px; border-radius: 10px; background: #dfc995; box-shadow: 0 0 10px rgba(223, 201, 149, 0.8); }
+}
+
+@keyframes tpDotPulse5 {
+  0%, 16% { width: 22px; border-radius: 10px; background: #dfc995; box-shadow: 0 0 10px rgba(223, 201, 149, 0.8); }
+  20%, 96% { width: 7px; border-radius: 50%; background: rgba(255, 255, 255, 0.45); box-shadow: none; }
+  100% { width: 22px; border-radius: 10px; background: #dfc995; box-shadow: 0 0 10px rgba(223, 201, 149, 0.8); }
+}
+
+.tp-carousel-3:not([data-tp-interactive="true"]) .tp-carousel-dot:nth-child(1) {
+  animation: tpDotPulse3 12s infinite;
+}
+.tp-carousel-3:not([data-tp-interactive="true"]) .tp-carousel-dot:nth-child(2) {
+  animation: tpDotPulse3 12s infinite -8s;
+}
+.tp-carousel-3:not([data-tp-interactive="true"]) .tp-carousel-dot:nth-child(3) {
+  animation: tpDotPulse3 12s infinite -4s;
+}
+
+.tp-carousel-5:not([data-tp-interactive="true"]) .tp-carousel-dot:nth-child(1) {
+  animation: tpDotPulse5 17.5s infinite;
+}
+.tp-carousel-5:not([data-tp-interactive="true"]) .tp-carousel-dot:nth-child(2) {
+  animation: tpDotPulse5 17.5s infinite -14s;
+}
+.tp-carousel-5:not([data-tp-interactive="true"]) .tp-carousel-dot:nth-child(3) {
+  animation: tpDotPulse5 17.5s infinite -10.5s;
+}
+.tp-carousel-5:not([data-tp-interactive="true"]) .tp-carousel-dot:nth-child(4) {
+  animation: tpDotPulse5 17.5s infinite -7s;
+}
+.tp-carousel-5:not([data-tp-interactive="true"]) .tp-carousel-dot:nth-child(5) {
+  animation: tpDotPulse5 17.5s infinite -3.5s;
+}
+
+/* ========================================================================== */
+/* SETAS DE NAVEGAÇÃO PRO LADO: OCULTAS CONFORME SOLICITAÇÃO DO CLIENTE       */
+/* ========================================================================== */
+
+.tp-carousel-nav,
+.tp-carousel-btn,
+.tp-carousel-prev,
+.tp-carousel-next,
+button.tp-carousel-nav,
+a.tp-carousel-nav {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* INDICADORES INFERIORES: PÍLULA DE VIDRO ELEGANTE */
+.tp-carousel-dots {
+  position: absolute !important;
+  bottom: 18px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: rgba(15, 15, 15, 0.45) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  padding: 6px 14px !important;
+  border-radius: 30px !important;
+  z-index: 25 !important;
+  pointer-events: auto !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.tp-carousel-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.35s ease !important;
+  padding: 0 !important;
+  outline: none !important;
+}
+
+.tp-carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+.tp-carousel-dot.is-active {
+  width: 22px !important;
+  border-radius: 10px !important;
+  background: #dfc995 !important;
+  box-shadow: 0 0 10px rgba(223, 201, 149, 0.8) !important;
+}
+
+/* ========================================================================== */
+/* PADRÃO EXACTO DOS BOTÕES E TEXTOS (THIAGO PESSOA LUXO - SEM ALTERAÇÃO)     */
+/* - Número: 38px Dourado #dfc995                                             */
+/* - Título: 28px Preto 800                                                   */
+/* - Parágrafo: 15px Preto #222222, Line-height 1.75                          */
+/* - Botão: Fundo Branco, Borda 1.5px Preto #111111, Raio 8px, Seta →         */
+/* - Hover: Inversão total de cores (Fundo #111111, Texto #ffffff)            */
+/* ========================================================================== */
+
+.tp-step-action-btn,
+.tp-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  border: 1.5px solid #111111 !important;
+  border-radius: 8px !important;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.2px !important;
+  text-decoration: none !important;
+  padding: 13px 26px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.22s ease-in-out !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+  margin-top: 16px !important;
+  width: fit-content !important;
+}
+
+.tp-step-action-btn:hover,
+.tp-cta-btn:hover {
+  background: #111111 !important;
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18) !important;
+}
+
+.tp-step-action-btn .tp-btn-arrow,
+.tp-cta-btn .tp-btn-arrow {
+  display: inline-block !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  color: inherit !important;
+  transition: transform 0.22s ease !important;
+}
+
+.tp-step-action-btn:hover .tp-btn-arrow,
+.tp-cta-btn:hover .tp-btn-arrow {
+  transform: translateX(4px) !important;
+  color: #ffffff !important;
+}
+
+/* RESPONSIVIDADE TABLET & MOBILE */
+@media (max-width: 1024px) {
+  .tp-showcase-slider,
+  .tp-center-carousel,
+  .tp-carousel-3d,
+  [data-tp-carousel] {
+    height: 440px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tp-showcase-slider,
+  .tp-center-carousel,
+  .tp-carousel-3d,
+  [data-tp-carousel] {
+    height: 380px !important;
+    border-radius: 6px !important;
+  }
+  .tp-carousel-nav,
+  .tp-carousel-btn {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 22px !important;
+  }
+  .tp-carousel-prev {
+    left: 10px !important;
+  }
+  .tp-carousel-next {
+    right: 10px !important;
+  }
+  .tp-step-action-btn,
+  .tp-cta-btn {
+    width: 100% !important;
+    padding: 14px 20px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tp-showcase-slider,
+  .tp-center-carousel,
+  .tp-carousel-3d,
+  [data-tp-carousel] {
+    height: 320px !important;
+  }
+}
+
+
+/* 9. RESPONSIVIDADE MOBILE */
+@media (max-width: 768px) {
+  .elementor-tp-page-wrapper .howworks,
+  body[class*="primeiro"] .elementor-tp-page-wrapper .howworks {
+    margin: 40px auto !important;
+    padding: 0 16px !important;
+  }
+  .elementor-tp-page-wrapper .howworks .e-con-inner,
+  .elementor-tp-page-wrapper .howworks-reverse .e-con-inner,
+  body[class*="primeiro"] .elementor-tp-page-wrapper .howworks .e-con-inner,
+  body[class*="primeiro"] .elementor-tp-page-wrapper .howworks-reverse .e-con-inner {
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+  .elementor-tp-page-wrapper .tp-text-col,
+  .elementor-tp-page-wrapper .tp-slider-col,
+  body[class*="primeiro"] .tp-text-col,
+  body[class*="primeiro"] .tp-slider-col {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
